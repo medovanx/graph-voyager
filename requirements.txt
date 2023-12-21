@@ -1,0 +1,3 @@
+pyqt5                       	# Managing the GUI
+pillow                       	# To convert any image format to .ico while compiling to .exe (needed by auto-py-to-exe)
+auto-py-to-exe        	# To compile into a .exe

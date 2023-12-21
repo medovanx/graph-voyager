@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>296</width>
+    <height>335</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Graph Voyager</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>279</width>
+     <height>178</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <property name="labelAlignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="formAlignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	font-size: 12px;
+font-weight:bold;
+	}</string>
+      </property>
+      <property name="text">
+       <string>Source</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="source_location">
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border: 0.5px solid gray;
+    border-radius: 4px;
+    padding: 4px;
+	font-size: 12px;
+    background-color: white;
+}
+
+</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	font-size: 12px;
+font-weight:bold;
+	}</string>
+      </property>
+      <property name="text">
+       <string>Goal</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="goal_location">
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border: 0.5px solid gray;
+    border-radius: 4px;
+    padding: 4px;
+	font-size: 12px;
+    background-color: white;
+}
+
+</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	font-size: 12px;
+font-weight:bold;
+	}</string>
+      </property>
+      <property name="text">
+       <string>Algorithm</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QComboBox" name="algorithm_select">
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border: 0.5px solid gray;
+    border-radius: 4px;
+    padding: 4px;
+	font-size: 12px;
+    background-color: white;
+}
+
+</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Breadth-First Search (BFS)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Uniform Cost Search (UCS)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Depth-First Search (DFS)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Depth-limited Search (DLS)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Iterative Deepening Search (IDDFS)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bidirectional Search (BDS)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Greedy Best-First Search (GBFS)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A* Search</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="6" column="0" colspan="2">
+     <widget class="QPushButton" name="search_button">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{color: #FFFFFF;
+            font-family: Arial;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6px;
+            background-color: #1BC466;
+            border-radius: 10px;}
+
+QPushButton:hover {
+background:#159e51;
+}</string>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="DLS_limit">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    border: 0.5px solid gray;
+    border-radius: 4px;
+    padding: 4px;
+	font-size: 12px;
+    background-color: white;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter DLS limit.</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="result">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>251</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	font: arial;
+	color: blue;
+	font-size: 14px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>Press Search to start.</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cost">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>270</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	font: arial;
+	color: blue;
+	font-size: 14px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="author">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>333</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;© Mohamed Darwesh (&lt;a href=&quot;https://github.com/medovanx&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;@&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;www.facebook.com/medovanx&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;medovanx&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="openExternalLinks">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
