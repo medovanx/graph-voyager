@@ -176,15 +176,15 @@ class Algorithms:
 
         while start_queue and goal_queue:
             # Forward search
-            current_start, path_start = start_queue.pop(0)
-            visited_start.append(current_start)
+            current_node, path_start = start_queue.pop(0)
+            visited_start.append(current_node)
 
-            if current_start in visited_goal:
-                backward_path = backward_paths[current_start]
+            if current_node in visited_goal:
+                backward_path = backward_paths[current_node]
                 backward_path.pop()
-                return forward_paths[current_start] + backward_path[::-1]
+                return forward_paths[current_node] + backward_path[::-1]
 
-            for neighbor in graph[current_start]:
+            for neighbor in graph[current_node]:
                 if neighbor not in visited_start:
                     start_queue.append((neighbor, path_start + [neighbor]))
                     forward_paths[neighbor] = path_start + [neighbor]
@@ -230,8 +230,7 @@ class Algorithms:
             visited.append(node)
 
             if node in graph:
-                neighbors = graph[node]
-                for neighbor in neighbors:
+                for neighbor in graph[node]:
                     if neighbor not in visited:
                         new_path = path + [neighbor]
                         heapq.heappush(queue, (heuristic[neighbor], neighbor, new_path))
