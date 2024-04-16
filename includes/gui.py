@@ -1,4 +1,3 @@
-import time
 from PyQt5 import uic, QtGui
 from PyQt5.QtWidgets import QWidget, QLineEdit
 from PyQt5.QtGui import *
