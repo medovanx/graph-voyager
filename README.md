@@ -30,13 +30,40 @@ Note: It's only to demonstrate how search algorithms work.</p>
   <li>A* Search</li>
 </ol>
 
+# Hotrun (without compiling)
+### 1. **Create and Activate Virtual Environment**
+
+- **Create the Virtual Environment**:  
+   Open your terminal and run the following command to create a virtual environment:
+   ```bash
+   python -m venv .venv
+### 2. **Activate the Virtual Environment**:
+  - On Windows:
+    ```bash
+    .venv\Scripts\activate
+    ```
+  - On macOS/Linux:
+    ```bash
+    source .venv/bin/activate
+    ```
+### 3. **Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
+### 4. **Run the Python Application**
+```bash
+python main.py
+```
+> **Note 1**: Make sure to activate the virtual environment every time you start working on the project to ensure that the correct dependencies are used.
+
+> **Note 2**: There's a precompiled binary in the Releases section you can download [here](https://github.com/medovanx/graph-voyager/releases/tag/v1)
+
+
 # How to Use
-<ol style="font-size:20px;">
-<li>Run the program, you can downloada prebuilt release from the releases page.</li>
-<li>Select the desired search algorithm from the available options.</li>
-<li>Specify the source and goal locations.</li>
-<li>Press Search.</li>
-</ol>
+- Run the program, you can downloada prebuilt release from the releases page.
+- Select the desired search algorithm from the available options.
+- Specify the source and goal locations.
+- Press Search.
 
 # Authors
 - Mohamed Darwesh [@medovanx](https://github.com/medovanx)
